@@ -3,15 +3,15 @@
 ## Описание тестов
 
 #### Тест 1: Валидное добавление книги
-- `test_add_new_book_book_added_successfully` - проверяет успешное добавление книги с валидным названием (до 40 символов)
+- `test_add_new_book_with_max_length_name` - проверяет успешное добавление книги с валидным названием (до 40 символов)
 
 #### Тест 2: Невалидные названия книг  
-- `test_add_new_book_invalid_length_book_names` - параметризованный тест, проверяющий, что книги с невалидными названиями не добавляются:
+- `test_add_new_book_invalid_names_not_added` - параметризованный тест, проверяющий, что книги с невалидными названиями не добавляются:
   - Пустая строка
   - Строка длиной более 40 символов
 
 #### Тест 3: Дублирование книг
-- `test_add_new_book_same_book_cannot_be_added_twice` - проверяет, что одну и ту же книгу нельзя добавить дважды
+- `test_add_duplicate_book_not_added` - проверяет, что одну и ту же книгу нельзя добавить дважды
 
 #### Тест 4: Жанр по умолчанию
 - `test_add_new_book_no_genre` - проверяет, что у новой книги изначально нет жанра (пустая строка)
@@ -20,21 +20,21 @@
 - `test_set_book_genre_set_genre_for_existing_book` - проверяет возможность установки жанра для существующей книги
 
 ### Тест 6: Получение словаря книг
-- `test_get_books_genre_returns_books_genre_dictionary` - проверяет получение словаря всех книг и жанров
+- `test_set_book_genre_valid_genre_book_exists` - проверяет получение словаря всех книг и жанров
 
 ### Тест 7: Получение списка избранных книг
-- `test_get_list_of_favorites_books_returns_favorites_list` - проверяет получение списка избранных книг
+- `test_get_book_genre_existing_book_with_genre` - проверяет получение списка избранных книг
 
 
 #### Тест 8: Получение книг по жанру
-- `test_get_books_with_specific_genre_returns_books_of_genre` - проверяет получение списка книг определенного жанра
+- `test_get_books_genre_returns_books_genre_dictionary` - проверяет получение списка книг определенного жанра
 
 
 #### Тест 9 Книги для детей, проверка возрастного рейтинга
-- `test_get_books_for_children_excludes_age_rated_genres` - проверяет, что метод возвращает только книги без возрастного рейтинга (исключает жанры "Ужасы" и "Детективы")
+- ` test_get_books_for_children_only_child_friendly_genres` - проверяет, что метод возвращает только книги без возрастного рейтинга (исключает жанры "Ужасы" и "Детективы")
 
 #### Тест 10: Добавление в избранное
-- `test_add_book_in_favorites_adds_existing_book` - проверяет добавление существующей книги в список избранных
+- `test_add_book_in_favorites_book_added_to_favorites` - проверяет добавление существующей книги в список избранных
 
 #### Тест 11: Удаление из избранного
 - `test_delete_book_from_favorites_deletes_existing_book` - проверяет удаление книги из списка избранных
