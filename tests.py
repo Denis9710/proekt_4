@@ -13,8 +13,8 @@ class TestBooksCollector:
 
 #Тест 1. Проверка успешного добавления новой книги с названием. Длиной не более 40 символов (валидное значение)
     def test_add_new_book_with_max_length_name(self, collector):
-         collector.add_new_book('Властелин колец')
-    assert 'Властелин колец' in collector.get_books_genre
+        collector.add_new_book('Властелин колец')
+        assert 'Властелин колец' in collector.get_books_genre
 
 #Тест 2. Параметризованный тест для добавления книг с невалидными названиями (пустая строка и строка длиной более 40 символов)
     @pytest.mark.parametrize("book_name", ["", "A" * 41] )
