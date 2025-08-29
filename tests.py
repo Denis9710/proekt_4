@@ -2,6 +2,7 @@ import pytest
 from main import BooksCollector
 
 
+
 class TestBooksCollector:
     
     def test_add_new_book_get_new_book(self):
@@ -37,10 +38,10 @@ class TestBooksCollector:
 
 #Тест 5. Проверка, что у книги можно установить жанр
     def test_set_book_genre_valid_genre_book_exists(self, collector):
-        name = "Железный человек"
+        name = "Мстители"
         genre = "Фантастика"
-        collector.books_genre {name: ""}
-        collector.set_books_genre {name, genre}
+        collector.books_genre[name] = ""
+        collector.set_book_genre(name, genre)
         assert collector.books_genre[name] == genre
 
 #Тест 6. Получение списка книг определенного жанра
@@ -118,4 +119,5 @@ class TestBooksCollector:
         
         result = collector.get_list_of_favorites_books()
         assert result == expected_favorites
+
         
